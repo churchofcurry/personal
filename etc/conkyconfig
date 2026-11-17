@@ -25,12 +25,13 @@ conky.config = {
     alignment = 'top_right',
     gap_x = 35,
     gap_y = 45,
-    minimum_width = 320,
-    maximum_width = 320,
+    minimum_width = 340,
+    maximum_width = 340,
 
     -- Text
     use_xft = true,
-    font = 'DejaVu Sans:size=10',
+    -- Pixel sizes keep login-time DPI changes from shrinking the fonts.
+    font = 'DejaVu Sans:pixelsize=15',
     xftalpha = 1,
     default_color = 'E6E6E6',
     color1 = '9AA0A6', -- secondary text and dividers
@@ -52,14 +53,14 @@ conky.config = {
 };
 
 conky.text = [[
-${color7}${font DejaVu Sans:bold:size=11}SYSTEM${font}
+${color7}${font DejaVu Sans:bold:pixelsize=16}SYSTEM${font}
 ${color1}${hr 2}${color}
 
 Battery ${alignr}${color3}${battery_percent}%${color}
 ${color3}${battery_bar 6}${color}
 
 CPU ${alignr}${color2}${cpu}%${color}
-${cpugraph 35,320 263238 EF5350}
+${cpugraph 37,340 263238 EF5350}
 
 RAM ${alignr}${color4}${mem} / ${memmax}${color}
 ${color4}${membar 6}${color}
@@ -67,16 +68,16 @@ ${color4}${membar 6}${color}
 Disk ${alignr}${color5}${fs_used /} / ${fs_size /}${color}
 ${color5}${fs_bar 6 /}${color}
 
-${color7}${font DejaVu Sans:bold:size=11}NETWORK${font}
+${color7}${font DejaVu Sans:bold:pixelsize=16}NETWORK${font}
 ${color1}${hr 2}${color}
 
 Download ${alignr}${color2}${downspeed wlo1}${color}
-${downspeedgraph wlo1 28,320 263238 EF5350}
+${downspeedgraph wlo1 30,340 263238 EF5350}
 
 Upload ${alignr}${color6}${upspeed wlo1}${color}
-${upspeedgraph wlo1 28,320 263238 F06292}
+${upspeedgraph wlo1 30,340 263238 F06292}
 
-${color7}${font DejaVu Sans:bold:size=11}TOP PROCESSES${font}
+${color7}${font DejaVu Sans:bold:pixelsize=16}TOP PROCESSES${font}
 ${color1}${hr 2}${color}
 
 ${color1}COMMAND${alignr}CPU    RAM${color}
