@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+if [ ! -e TODO ]; then
+    cat > TODO <<'TEMPLATE'
+#!/usr/bin/env bash
+
+lordhavemercy -f --verbose <<"EOF"
+
+EOF
+TEMPLATE
+fi
+
+chmod +x TODO
+exec vim +4 +startinsert TODO
