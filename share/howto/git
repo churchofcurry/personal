@@ -17,7 +17,7 @@ git init --bare <path/to/repo>
 gh repo create <repo name> --private --source=<path/to/repo>
 
 #### Add remote origin
-git remote add origin git@github.com:rskottap/<repo name>.git
+git remote add origin git@github.com:churchofcurry/<repo name>.git
 
 ### Git reverting
 #### unstage files
@@ -53,7 +53,7 @@ git config set --global push.autosetupremote true
 
 ### Edits
 gh repo edit
-gh repo edit rskottap/<repo-name> -d <string>
+gh repo edit churchofcurry/<repo-name> -d <string>
 git commit --amend # to change commit message before pushing
 git commit --amend --no-edit # change/ammend the commit without editing the message
 
